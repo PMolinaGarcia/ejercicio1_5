@@ -20,4 +20,8 @@ public class Provincia implements Serializable{
             suma += Integer.parseInt(municipio.contarHabitantes());
         }
     }
+    //Añadimos el método toString. Será necesario llamarlo para que se imprima con un System.out.print
+    public String toString(){
+        return "La provincia tiene "+suma+" habitantes";
+    }
 }

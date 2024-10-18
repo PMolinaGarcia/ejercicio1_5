@@ -20,4 +20,8 @@ public class Municipio implements Serializable{
             suma += Integer.parseInt(localidad.getNumeroHabitantes());
         }
     }
+    //Añadimos el método toString. Será necesario llamarlo para que se imprima con un System.out.print
+    public String toString(){
+        return "El municipio tiene "+suma+" habitantes";
+    }
 }

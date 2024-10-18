@@ -3,11 +3,14 @@
 package aplicacion;
 import dominio.*;
 
-//Definimos la clase y comenzamos añadiendo sus atributos
+//Definimos la clase
 public class Principal{
+    //Creamos el método main de ejecución
     public static void main(String[] args) {
-
-        Localidad lc=new Localidad("Albacete", "1");
+        //Instanciamos una clase nueva de tipo localidad a la que llamamos lc y le damos los parámetros deseados
+        Localidad lc=new Localidad("Albacete", "200.000");
+        //Es necesario llamar al toString para que se escriba, ya que este método solo serializa. Se imprimen unos caracteres serializados
+        System.out.println(lc.toString());
     }
 
 }

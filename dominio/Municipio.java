@@ -17,7 +17,7 @@ public class Municipio implements Serializable{
     public int contarHabitantes(){
         int suma = 0;
         for (Localidad localidad : localidadesMunicipio) {
-            suma = numeroHabitantes;
+            suma += Integer.parseInt(localidad.getNumeroHabitantes());
         }
     }
 }

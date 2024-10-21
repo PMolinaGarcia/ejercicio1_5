@@ -5,10 +5,10 @@ import java.io.Serializable;
 public class Localidad implements Serializable {
     //Definimos los tipos de atributos y los mismos
     private String nombre;
-    private String numeroDeHabitantes;
+    private int numeroDeHabitantes;
 
     //Constructor
-    public Localidad(String nombre, String numeroDeHabitantes) {
+    public Localidad(String nombre, int numeroDeHabitantes) {
         this.nombre = nombre;
         this.numeroDeHabitantes = numeroDeHabitantes;
     }
@@ -18,7 +18,10 @@ public class Localidad implements Serializable {
 
         this.nombre = nombre;
     }
-    public void setNumeroDeHabitantes(String numeroDeHabitantes){
+
+    //Si hiciéramos public Localidad setNombre (String nombre){this.nombre = nombre; return this;}, podríamos hacer operaciones con el objeto
+
+    public void setNumeroDeHabitantes(int numeroDeHabitantes){
 
         this.numeroDeHabitantes = numeroDeHabitantes;
     }
@@ -27,7 +30,7 @@ public class Localidad implements Serializable {
         return nombre;
     }
 
-    public String getNumeroDeHabitantes() {
+    public int getNumeroDeHabitantes() {
         return numeroDeHabitantes;
     }
 

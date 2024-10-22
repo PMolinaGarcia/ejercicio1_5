@@ -72,7 +72,7 @@ public class Interfaz {
             System.out.println(i+".- "+p.getProvincia(i));
         System.out.print("Número de provincia: ");
         int i=sc.nextInt();
-        Provincia pr=p.getProvincia(i)
+        Provincia pr=p.getProvincia(i);
         sc.nextLine();
         System.out.print("Listado de municipios de la provincia de "+ pr.getNombre());
         for (int i=0;i<p.size();i++)

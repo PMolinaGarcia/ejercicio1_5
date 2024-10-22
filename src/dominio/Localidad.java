@@ -35,7 +35,16 @@ public class Localidad implements Serializable {
     }
 
     //Añadimos el método toString. Será necesario llamarlo para que se imprima con un System.out.print
-    public String toString(){
-        return "La localidad se llama "+nombre+" y tiene "+numeroDeHabitantes+" habitantes";
-    }
+    //public String toString()//return "La localidad se llama "+nombre+" y tiene "+numeroDeHabitantes+" habitantes";
+
+    //Ahora hemos quitado el toString para cambiarlo a un StringBuilder
+        public String toString() {
+            StringBuilder datos = new StringBuilder();
+
+            datos.append("El nombre de la localidad es: ")
+                    .append(nombre)
+                    .append("; y su número de habitantes es: ")
+                    .append(numeroDeHabitantes);
+            return datos.toString();
+        }
 }

@@ -17,11 +17,12 @@ public class Municipio implements Serializable{
     public int contarHabitantes(){
         int suma = 0;
         for (Localidad localidad : localidadesMunicipio) {
-            suma += Integer.parseInt(localidad.getNumeroHabitantes());
+            suma += Integer.parseInt(localidad.getNumeroDeHabitantes);
         }
+        return suma;
     }
     //Añadimos el método toString. Será necesario llamarlo para que se imprima con un System.out.print
     public String toString(){
-        return "El municipio tiene "+suma+" habitantes";
+        return "El municipio tiene "+ suma +" habitantes";
     }
 }

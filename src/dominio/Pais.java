@@ -39,7 +39,7 @@ public class Pais {
             fo.close();
             }
         catch(IOException e){
-            System.out.println("Error: grabar no ha salido bien. Corrija y vuelva a intentarlo.")
+            System.out.println("Error: grabar no ha salido bien. Corrija y vuelva a intentarlo.");
             }
     }
     //Abrimos un fichero ya existente. Es estático porque no se lo voy a pedir a ningún objeto. Crea el objeto, me lo devuelve y lo asigna al país. Un servicio de la clase, no del objeto.
@@ -57,5 +57,3 @@ public class Pais {
         }
     }
 
-
-}

@@ -5,14 +5,14 @@ OUT_DIR=bin
 LIB_DIR=./lib
 DOC_DIR=html
 JAR_FILE = $(P).jar
-compilar:
+compilar:limpiar
 	mkdir $(OUT_DIR)
 	find $(SRC_DIR) -name *.java | xargs javac -cp $(OUT_DIR):$(LIB_DIR) -d $(OUT_DIR)
 
 jar:compilar
 	jar cvfm $(JAR_FILE) manifest.txt  -C  $(OUT_DIR) .
 ejecutar:compilar
-	java -cp $(OUT_DIR) $(MAIN_CLASS)
+	java -cp $(OUT_DIR) $(MAIN_CLASS) 
 limpiar:
 	rm -rf $(OUT_DIR)
 	rm -rf $(DOC_DIR)
@@ -27,5 +27,5 @@ runjar: jar
 	@echo "Manifest-Version: 1.0" > manifest.txt
 	@echo "Main-Class:" $(MAIN_CLASS) >> manifest.txt
 	@echo "Class-Path: . ">> manifest.txt
-	@echo "" >> manifest.txt
-	java -jar $(JAR_FILE)
+	@echo "" >> manifest.txt	
+	java -jar $(JAR_FILE) 
